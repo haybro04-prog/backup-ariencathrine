@@ -1,0 +1,14 @@
+/*
+Theme Name: DJ Tropix
+Theme URI: https://example.com/dj-tropix
+Author: Roy
+Description: Custom theme based on Figma export for DJ Tropix, with modular sections (Hero, About, Music, Events, Gallery, Contact, Footer) managed via WordPress.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.5
+Requires PHP: 7.4
+Text Domain: dj-tropix
+*/
+
+/* The main styles are loaded from the compiled CSS bundle; keep this minimal. */
+

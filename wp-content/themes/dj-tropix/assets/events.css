@@ -1,0 +1,485 @@
+/* Events section – Upcoming shows (from DJ Events CPT) */
+.dj-events-section {
+  position: relative;
+  padding: 6rem 1rem;
+  background: #000;
+  color: #fff;
+}
+
+.dj-events-inner {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.dj-events-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.dj-events-title {
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.dj-events-title span {
+  color: #f97316;
+}
+
+.dj-events-underline {
+  width: 6rem;
+  height: 4px;
+  margin: 1.5rem auto 1.5rem;
+  background: #f97316;
+}
+
+.dj-events-subtitle {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.dj-events-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .dj-events-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.dj-event-card {
+  background: radial-gradient(circle at top left, rgba(249, 115, 22, 0.18), transparent 55%),
+              radial-gradient(circle at bottom right, rgba(15, 23, 42, 0.9), #020617);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  border: 1px solid #1f2933;
+  display: flex;
+  gap: 1.5rem;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.dj-event-card:hover {
+  border-color: rgba(249, 115, 22, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+.dj-event-date {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.dj-event-date-box {
+  background: #f97316;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  width: 5rem;
+}
+
+.dj-event-date-day {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.dj-event-date-month {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.dj-event-main {
+  flex: 1;
+}
+
+.dj-event-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  transition: color 0.25s ease;
+}
+
+.dj-event-card:hover .dj-event-title {
+  color: #f97316;
+}
+
+.dj-event-meta {
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+.dj-event-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.dj-event-meta-label {
+  color: #f97316;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.dj-event-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.dj-event-status {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #f97316;
+  text-transform: uppercase;
+}
+
+.dj-event-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.9rem;
+  border-radius: 999px;
+  background: #f97316;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.dj-event-button:hover {
+  background: #ea580c;
+  transform: translateY(-1px);
+}
+
+.dj-events-empty {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 2rem;
+}
+
+/* --- New 2-column layout for events section --- */
+.dj-events-2col {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.dj-events-maincol {
+  flex: 2 1 0%;
+  min-width: 0;
+}
+
+.dj-events-sidebar {
+  flex: 1 1 320px;
+  min-width: 320px;
+  max-width: 400px;
+  background: none;
+  padding-top: 0.5rem;
+}
+
+.dj-next-show-card {
+  position: relative;
+  background: #111827;
+  border-radius: 1rem;
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+  border: 1.5px solid #f97316;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+  display: flex;
+  align-items: stretch;
+  min-height: 220px;
+}
+.dj-next-show-bg {
+  flex: 1 1 0%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  filter: blur(1.5px);
+  z-index: 1;
+}
+.dj-next-show-content {
+  position: absolute;
+  z-index: 2;
+  left: 0; right: 0; top: 0; bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.5rem 2rem;
+}
+.dj-next-show-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.dj-next-show-left {
+  flex: 1 1 0%;
+}
+
+.dj-next-show-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 120px;
+}
+
+.dj-next-show-countdown-circle {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 2.5px solid #f97316;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 60% 40%, rgba(249,115,22,0.13), transparent 70%);
+  box-shadow: 0 0 24px 0 rgba(249,115,22,0.18);
+  color: #fff;
+  margin-left: auto;
+}
+.dj-next-show-countdown-number {
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #f97316;
+  line-height: 1;
+}
+.dj-next-show-countdown-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.08em;
+  margin-top: 0.2em;
+}
+.dj-next-show-label {
+  color: #f97316;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.dj-next-show-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  color: #fff;
+}
+.dj-next-show-meta {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+.dj-next-show-meta-label {
+  color: #f97316;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-right: 0.3em;
+}
+.dj-next-show-countdown {
+  color: #f97316;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+.dj-next-show-tickets-btn {
+  display: inline-block;
+  background: #f97316;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.7rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+.dj-next-show-tickets-btn:hover {
+  background: #ea580c;
+}
+.dj-upcoming-events-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+  color: #fff;
+}
+.dj-upcoming-events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.dj-upcoming-event-card {
+  display: flex;
+  align-items: center;
+  background: #181f2a;
+  border-radius: 0.7rem;
+  padding: 1.1rem 1.3rem;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+  border: 1px solid #232b3a;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+.dj-upcoming-event-date-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 3.2rem;
+  margin-right: 1.1rem;
+}
+.dj-upcoming-event-day {
+  background: #f97316;
+  color: #fff;
+  border-radius: 0.6rem 0.6rem 0 0;
+  width: 3.2rem;
+  height: 2.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.dj-upcoming-event-month {
+  background: #232b3a;
+  color: #f97316;
+  border-radius: 0 0 0.6rem 0.6rem;
+  width: 3.2rem;
+  height: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.dj-upcoming-event-meta-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  min-width: 110px;
+  color: #f97316;
+  font-size: 0.95rem;
+  gap: 0.2rem;
+}
+.dj-upcoming-event-time {
+  color: #fff;
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin-top: 0.1rem;
+}
+.dj-upcoming-event-day {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.dj-upcoming-event-month {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.dj-upcoming-event-info {
+  flex: 1 1 0%;
+}
+.dj-upcoming-event-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+.dj-upcoming-event-meta {
+  color: #f97316;
+  font-size: 0.95rem;
+}
+.dj-upcoming-event-empty {
+  color: #fff;
+  opacity: 0.7;
+  padding: 1.2rem 0;
+}
+.dj-played-at-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+  color: #fff;
+}
+.dj-played-at-list {
+  display: block !important;
+  width: 100% !important;
+  margin-bottom: 1.5rem;
+}
+.dj-played-at-card {
+  display: flex !important;
+  align-items: center !important;
+  background: #181f2a;
+  border-radius: 0.7rem;
+  padding: 0.7rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  border: 1px solid #232b3a;
+  margin-bottom: 1rem;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  gap: 1rem;
+}
+.dj-played-at-thumb {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 0.5rem;
+  background-size: cover;
+  background-position: center;
+  background-color: #222;
+  margin-right: 0.7rem;
+}
+.dj-played-at-info {
+  flex: 1 1 0%;
+}
+.dj-played-at-venue {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+}
+.dj-played-at-meta {
+  color: #f97316;
+  font-size: 0.93rem;
+}
+.dj-played-at-all-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #fff;
+  color: #f97316;
+  font-weight: 700;
+  border-radius: 0.7rem;
+  padding: 0.9rem 0;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border: 2px solid #f97316;
+  transition: background 0.2s, color 0.2s;
+}
+.dj-played-at-all-btn:hover {
+  background: #f97316;
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .dj-events-2col {
+    flex-direction: column;
+  }
+  .dj-events-sidebar {
+    max-width: 100%;
+    min-width: 0;
+    padding-top: 2.5rem;
+  }
+}
+
+
+
+

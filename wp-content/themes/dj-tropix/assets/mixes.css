@@ -1,0 +1,197 @@
+/* Latest Mixes section – YouTube banner cards with meta data */
+.dj-mixes-section {
+  padding: 6rem 1rem;
+  background: radial-gradient(circle at top, #020617, #000);
+  color: #fff;
+}
+
+.dj-mixes-inner {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.dj-mixes-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.dj-mixes-title {
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.dj-mixes-title span {
+  color: #f97316;
+}
+
+.dj-mixes-underline {
+  width: 6rem;
+  height: 4px;
+  margin: 1.5rem auto 1.5rem;
+  background: #f97316;
+}
+
+.dj-mixes-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.dj-mixes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 900px) {
+  .dj-mixes-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.dj-mix-card {
+  background: linear-gradient(180deg, #020617, #020617);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  border: 1px solid #111827;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dj-mix-card:hover {
+  border-color: rgba(249, 115, 22, 0.7);
+  transform: translateY(-3px);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.75);
+}
+
+.dj-mix-banner {
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background: #020617;
+  aspect-ratio: 16 / 9;
+}
+
+.dj-mix-banner img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.dj-mix-placeholder {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top, rgba(249, 115, 22, 0.25), rgba(2, 6, 23, 0.95));
+}
+
+.dj-mix-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7));
+}
+
+.dj-mix-duration {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.8rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.dj-mix-play-button {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.dj-mix-play-button button {
+  pointer-events: auto;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 999px;
+  border: none;
+  background: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  outline: none;
+}
+
+.dj-mix-play-button button:focus {
+  outline: none;
+  box-shadow: none;
+  background: none;
+}
+
+.dj-mix-play-button button:hover svg circle {
+  fill: rgba(234, 88, 12, 0.7);
+}
+
+.dj-mix-embed {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: none;
+  background: #000;
+}
+
+.dj-mix-card.is-playing .dj-mix-iframe {
+  display: block;
+}
+
+.dj-mix-card.is-playing.is-mp4 .dj-mix-iframe {
+  display: none;
+}
+
+.dj-mix-card.is-playing.is-mp4 .dj-mix-video {
+  display: block;
+}
+
+.dj-mix-card.is-playing .dj-mix-play-button {
+  display: none;
+}
+
+.dj-mix-card.is-playing img {
+  visibility: hidden;
+}
+
+.dj-mix-card.is-playing .dj-mix-placeholder {
+  visibility: hidden;
+}
+
+.dj-mix-meta-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.dj-mix-meta-location {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.25rem;
+}
+
+.dj-mix-meta-date {
+  font-size: 0.85rem;
+  color: rgba(148, 163, 184, 0.9);
+  margin-bottom: 0.75rem;
+}
+
+.dj-mix-meta-description {
+  font-size: 0.95rem;
+  color: rgba(209, 213, 219, 0.9);
+}
+

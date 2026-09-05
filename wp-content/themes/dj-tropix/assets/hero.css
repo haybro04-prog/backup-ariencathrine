@@ -1,0 +1,171 @@
+/* Hero section – editable content from admin (Hero Banners + Customizer) */
+.dj-hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.9)
+  );
+}
+
+.dj-hero-slider {
+  position: absolute;
+  inset: 0;
+}
+
+.dj-hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dj-hero-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+
+.dj-hero-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.dj-hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.dj-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.65) 50%,
+    rgba(0, 0, 0, 0.95) 100%
+  ) !important;
+}
+
+.dj-hero-inner {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 1rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.dj-hero-title {
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
+
+.dj-hero-tagline {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  color: #fb923c;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.dj-hero-description {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 3rem;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.dj-hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.dj-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.dj-hero-btn--primary {
+  background: #f97316;
+  color: #fff;
+}
+
+.dj-hero-btn--primary:hover {
+  background: #ea580c;
+  color: #fff;
+}
+
+.dj-hero-btn--secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.dj-hero-btn--secondary:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.dj-hero-scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.6);
+}
+
+.dj-hero-dots {
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dj-hero-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.4);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.dj-hero-dot:hover,
+.dj-hero-dot.is-active {
+  background: #f97316;
+}

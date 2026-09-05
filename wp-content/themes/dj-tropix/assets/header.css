@@ -1,0 +1,143 @@
+/* Horizontal top menu – items from Appearance → Menus (Primary Menu) */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.site-header.site-header--scrolled {
+  background: #000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.site-header-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  min-height: 3.5rem;
+}
+
+.site-branding {
+  flex-shrink: 0;
+}
+
+.site-branding-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.site-branding-link:hover {
+  color: #fff;
+}
+
+.site-branding-link .custom-logo {
+  height: 2.25rem;
+  width: auto;
+  max-height: 2.25rem;
+  display: block;
+}
+
+.site-branding-link .site-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.primary-nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary-menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.primary-menu .menu-item {
+  margin: 0;
+}
+
+.primary-menu a {
+  display: inline-block;
+  padding: 0.625rem 0.25rem;
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+
+.primary-menu a:hover,
+.primary-menu a:focus {
+  color: #fff;
+}
+
+.primary-menu .current-menu-item a {
+  color: #fff;
+}
+
+/* Submenus (dropdown) – horizontal bar can show dropdowns on hover */
+.primary-menu .sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 12rem;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  background: rgba(0, 0, 0, 0.98);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.25rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.primary-menu .menu-item-has-children {
+  position: relative;
+}
+
+.primary-menu .menu-item-has-children:hover > .sub-menu,
+.primary-menu .menu-item-has-children:focus-within > .sub-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.primary-menu .sub-menu .menu-item {
+  margin: 0;
+}
+
+.primary-menu .sub-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #9ca3af;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.primary-menu .sub-menu a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+}

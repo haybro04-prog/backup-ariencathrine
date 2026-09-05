@@ -1,0 +1,230 @@
+/* Contact section – "Get in Touch" layout + Fluent Form styling to match design */
+
+:root {
+  --dj-contact-bg: #000;
+  --dj-contact-input-bg: #1e293b;
+  --dj-contact-accent: #f97316;
+  --dj-contact-text: #fff;
+  --dj-contact-text-muted: #94a3b8;
+}
+
+.dj-contact-section {
+  background: var(--dj-contact-bg);
+  color: var(--dj-contact-text);
+  padding: 4rem 1rem 5rem;
+}
+
+.dj-contact-inner {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.dj-contact-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.dj-contact-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.dj-contact-title-highlight {
+  color: var(--dj-contact-accent);
+}
+
+.dj-contact-underline {
+  width: 6rem;
+  height: 4px;
+  margin: 1rem auto 1.5rem;
+  background: var(--dj-contact-accent);
+}
+
+.dj-contact-subtitle {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--dj-contact-text-muted);
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dj-contact-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .dj-contact-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dj-contact-form-col {
+  min-width: 0;
+}
+
+.dj-contact-form-widget .widget-title {
+  display: none;
+}
+
+.dj-contact-section .fluentform textarea.ff-el-form-control {
+  min-height: 120px !important;
+}
+
+.dj-contact-placeholder {
+  color: var(--dj-contact-text-muted);
+  font-size: 0.9rem;
+}
+
+/* Connect With Me column */
+.dj-contact-connect-col {
+  min-width: 0;
+}
+
+.dj-contact-connect-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+  color: var(--dj-contact-text);
+}
+
+.dj-contact-connect-desc {
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+  color: var(--dj-contact-text-muted);
+  line-height: 1.5;
+}
+
+.dj-contact-social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dj-contact-social-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--dj-contact-input-bg);
+  border-radius: 8px;
+  color: var(--dj-contact-text);
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.dj-contact-social-link:hover {
+  background: #334155;
+  color: var(--dj-contact-text);
+}
+
+.dj-contact-social-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dj-contact-social-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.dj-contact-social-label {
+  font-weight: 500;
+}
+
+/* --- Fluent Form overrides (scoped to contact section) --- */
+.dj-contact-section .fluentform .ff-el-form-control,
+.dj-contact-section .fluentform input[type="text"],
+.dj-contact-section .fluentform input[type="email"],
+.dj-contact-section .fluentform input[type="url"],
+.dj-contact-section .fluentform input[type="tel"],
+.dj-contact-section .fluentform select.ff-el-form-control,
+.dj-contact-section .fluentform textarea.ff-el-form-control {
+  background: var(--dj-contact-input-bg) !important;
+  border: 1px solid #334155 !important;
+  border-radius: 8px !important;
+  color: var(--dj-contact-text) !important;
+  padding: 12px 16px !important;
+  font-size: 1rem !important;
+  width: 100% !important;
+}
+
+.dj-contact-section .fluentform .ff-el-form-control::placeholder,
+.dj-contact-section .fluentform input::placeholder,
+.dj-contact-section .fluentform textarea::placeholder {
+  color: var(--dj-contact-text-muted) !important;
+  opacity: 1;
+}
+
+.dj-contact-section .fluentform .ff-el-form-control:focus {
+  border-color: var(--dj-contact-accent) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.2) !important;
+}
+
+.dj-contact-section .fluentform .ff-el-group {
+  margin-bottom: 1.25rem;
+}
+
+.dj-contact-section .fluentform .ff-el-input--label label {
+  color: var(--dj-contact-text-muted) !important;
+  font-size: 0.9rem;
+}
+
+/* Submit button: orange, white text, paper plane icon */
+.dj-contact-section .fluentform .ff_submit_btn_wrapper,
+.dj-contact-section .fluentform .ff_submit_btn_wrapper_custom {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.dj-contact-section .fluentform .ff-btn.ff-btn-submit,
+.dj-contact-section .fluentform button.ff-btn.ff-btn-primary,
+.dj-contact-section .fluentform .ff_btn_submit {
+  background: var(--dj-contact-accent) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  padding: 12px 24px !important;
+  font-size: 1rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  cursor: pointer !important;
+  transition: background 0.2s ease, transform 0.2s ease !important;
+}
+
+.dj-contact-section .fluentform .ff-btn.ff-btn-submit:hover,
+.dj-contact-section .fluentform button.ff-btn.ff-btn-primary:hover {
+  background: #ea580c !important;
+}
+
+/* Paper plane icon on submit button (via CSS) */
+.dj-contact-section .fluentform .ff-btn.ff-btn-submit::before,
+.dj-contact-section .fluentform button.ff-btn.ff-btn-primary::before {
+  content: "";
+  display: inline-block;
+  width: 1.125rem;
+  height: 1.125rem;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m22 2-7 20-4-9-9-4Z'/%3E%3Cpath d='M22 2 11 13'/%3E%3C/svg%3E") center/contain no-repeat;
+  flex-shrink: 0;
+}
+
+.dj-contact-section .fluentform .ff-btn.ff-btn-submit.ff_btn_no_style::before,
+.dj-contact-section .fluentform button.ff-btn.ff-btn-primary.ff_btn_no_style::before {
+  display: none;
+}
+
+/* Hide default Fluent Form labels if you use placeholders only; optional */
+.dj-contact-section .fluentform .ff_hide_label .ff-el-input--label {
+  display: none;
+}

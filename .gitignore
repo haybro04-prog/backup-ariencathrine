@@ -1,0 +1,17 @@
+# WordPress core
+wp-admin/
+wp-includes/
+index.php
+license.txt
+readme.html
+wp-*.php
+
+# Large files, Backups and Uploads
+*.mp4
+*.wpress
+wp-content/ai1wm-backups/
+wp-content/uploads/
+
+# OS files
+.DS_Store
+Thumbs.db
