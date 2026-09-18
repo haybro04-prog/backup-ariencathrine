@@ -1,35 +1,70 @@
-# DJ Tropix - Custom WordPress Theme
+# DJ Tropix — Custom WordPress Theme
 
-A professional, high-energy one-page website designed for a DJ, focusing on a seamless user experience, mobile responsiveness, and a modern tropical aesthetic.
+> A high-energy, mobile-first WordPress theme built for **DJ Arien Cathrine** — a techno/tech house artist based in Bali, Indonesia.
 
-## ?? Project Overview
-This project is a custom-developed WordPress theme tailored for a DJ's brand. The goal was to create a visually striking landing page that handles everything from event schedules and music mixes to professional contact integration.
+[![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-blue)](https://wordpress.org)
+[![License](https://img.shields.io/badge/License-GPLv2-blue)](LICENSE)
+[![PHP](https://img.shields.io/badge/PHP-7.4%2B-orange)](https://php.net)
+[![Tech Stack](https://img.shields.io/badge/Tech-PHP%20%7C%20CSS3%20%7C%20JS%20ES6+-orange)](https://github.com/)
 
-## ??? Tech Stack
-- **CMS:** WordPress
-- **Languages:** PHP, CSS3, JavaScript (ES6+)
-- **Design Approach:** Mobile-First Responsive Design
-- **Tools:** Laragon (Local Development), Git/GitHub (Version Control)
+---
 
-## ? Key Features & Contributions
-- **Custom Theme Development:** Built a modular theme structure using WordPress template parts for better maintainability.
-- **Dynamic Event Management:** Implemented a custom post type for events, allowing the client to easily update their tour dates and venues.
-- **Responsive UI/UX:** Optimized the layout for all devices, ensuring the experience is fluid from desktop to mobile.
-- **Custom Functionality:** 
-    - Developed a custom navigation filter to dynamically manage menu items.
-    - Implemented a custom "Played At" venue list with a optimized vertical layout for better readability.
-    - Created modular sections (Hero, About, Music, Events, Contact) managed via the WordPress Customizer.
+## 🎯 Overview
 
-## ?? Repository Structure
-To maintain a professional and lean repository, this project follows industry best practices:
-- **wp-content/themes/dj-tropix**: Contains the entirety of the custom design and logic.
-- **wp-content/plugins**: Includes the specific plugins required to run the site's functionality.
-- *Note: WordPress core files and large media uploads are excluded via .gitignore to keep the repository focused on original code contributions.*
+DJ Tropix is a custom-developed WordPress theme designed for **DJ Arien Cathrine's** brand. Built around a striking **black, orange, and grey** color palette, the site handles everything from event schedules and music mixes to professional booking and contact integration — all in a single, immersive one-page experience.
 
-## ?? Visuals
-*(Developer Note: I recommend adding 2-3 screenshots of the homepage here to show the final result to recruiters!)*
+## ✨ Features
 
-## ?? Local Setup
-1. Clone this repository into your local WordPress wp-content directory.
-2. Activate the dj-tropix theme from the WordPress Dashboard.
-3. Configure the Hero and Event sections via the Theme Customizer.
+- **Custom Theme Architecture** — Modular template parts for maintainability and scalability
+- **Dynamic Event Management** — Custom post type for tour dates and venues, fully manageable from the WordPress Dashboard
+- **Booking System** — Integrated booking form for professional inquiries and event requests
+- **"Played At" Venue Showcase** — Optimized vertical layout highlighting international performance history
+- **Gallery Section** — Visual showcase of mixes and live performances
+- **Responsive UI/UX** — Mobile-first design ensuring a seamless experience from desktop to mobile
+- **WordPress Customizer** — Hero, About, Music, Events, Gallery, Contact, and Footer sections managed visually
+- **Custom Navigation Filter** — Dynamically manages menu items based on context
+
+## 🎨 Design
+
+- **Color Palette**: Black, Orange, Grey — high-contrast, energetic, and on-brand
+- **Aesthetic**: Modern tropical with a dark, club-ready vibe
+- **Typography**: Bold, readable headings paired with clean body text
+
+## 🛠 Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| CMS | WordPress 6.0+ |
+| Languages | PHP 7.4+, CSS3, JavaScript (ES6+) |
+| Design | Mobile-First Responsive |
+| Local Dev | Laragon |
+| Version Control | Git / GitHub |
+
+## 📁 Repository Structure
+
+```
+wp-content/themes/dj-tropix/    ← Custom theme (design + logic)
+wp-content/plugins/                  ← Required plugins for site functionality
+```
+
+> WordPress core files and large media uploads are excluded via `.gitignore` to keep the repository focused on original code contributions.
+
+## 🖼 Screenshots
+
+*(Add 2–3 screenshots of the homepage here to showcase the final design to recruiters and visitors.)*
+
+## 🚀 Local Setup
+
+1. **Clone** the repository into your local WordPress `wp-content/themes/` directory
+2. **Activate** `dj-tropix` from the WordPress Dashboard → Appearance → Themes
+3. **Install** required plugins (listed in `wp-content/plugins/`)
+4. **Configure** sections (Hero, About, Music, Events, Gallery, Contact, Footer) via **Appearance → Customize**
+5. **Set up** the booking form and contact integration via the Customizer
+
+## 🤝 Contributing
+
+Contributions are welcome! Please open an issue first to discuss what you'd like to change.
+
+## 📄 License
+
+This project is licensed under the **GNU General Public License v2.0** — see the [LICENSE](LICENSE) file for details.
